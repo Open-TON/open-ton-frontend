@@ -1,0 +1,26 @@
+.navigation {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {}
+
+.logo {}
+
+.navList {
+    display: none;
+    list-style: none;
+}
+
+/* Tablet and desktop styles */
+@media (min-width: 481px) {
+    .navigation {
+        max-width: var(--max-width);
+        padding: 0 var(--sides-padding);
+    }
+
+    .title {}
+}

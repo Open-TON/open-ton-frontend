@@ -1,0 +1,15 @@
+.section {
+    padding: 0 var(--sides-padding);
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+/* Tablet and desktop styles */
+@media (min-width: 481px) {
+    .section {
+        padding: 4rem var(--sides-padding);
+        flex-direction: row;
+    }
+}
