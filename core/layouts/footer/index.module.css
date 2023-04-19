@@ -1,17 +1,24 @@
 .navigation {
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.title {}
+.navigation > div {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.title {
+}
 
 /* Tablet styles */
 @media (min-width: 481px) {
-    .navigation {
-        max-width: var(--max-width);
-        padding: 0 var(--sides-padding);
-    }
+  .navigation {
+    max-width: var(--max-width);
+    padding: 0 var(--sides-padding);
+  }
 }

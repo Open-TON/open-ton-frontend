@@ -1,15 +1,118 @@
 .section {
-    padding: 0 var(--sides-padding);
-    margin-bottom: 5rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column-reverse;
+  padding: 0 var(--sides-padding);
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.section > div:first-child {
+  width: 100%;
+  max-width: 100%;
+  float: left;
+}
+
+.mainPageDecoratos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mainPageDecoratos > div {
+  padding: 16px 19px;
+  width: auto;
+  height: 50px;
+  background: #f8f8f8;
+  border-radius: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.mainPageDecoratos > div:first-child > span {
+  background: linear-gradient(180deg, #5cbff0 0%, #0495fe 100%);
+}
+
+.mainPageDecoratos > div .decoratorPoint {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: linear-gradient(180deg, #737373 0%, #3a3a3a 100%);
+}
+
+.block1 {
+  width: auto;
+  max-width: 60%;
+  float: left;
+}
+
+.block1 > div:first-child {
+  margin-top: 8%;
+  font-weight: 500;
+  max-width: 100%;
+  font-size: 35px;
+  line-height: 53px;
+}
+
+.block1 > div > span > img {
+  width: 38px;
+  height: 38px;
+}
+
+.block1 span {
+  color: #0495fe;
+}
+
+.aimText {
+  padding-top: 35px;
+  width: auto;
+}
+
+.aimText > p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.block1 > .buttons {
+  padding-top: 66px;
+  display: flex;
+  gap: 20px;
+}
+
+.block1 > .buttons > button {
+  border-radius: 41px;
+  max-width: 295px;
+  width: auto;
+
+  padding: 0px 45px 0px 45px;
+  height: 56px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #ffffff;
+  background: #000000;
+}
+
+.block1 > .buttons > button:last-child {
+  border: 2px solid #000000;
+  border-radius: 41px;
+  background-color: #ffffff;
+  color: black;
 }
 
 /* Tablet and desktop styles */
 @media (min-width: 481px) {
-    .section {
-        padding: 4rem var(--sides-padding);
-        flex-direction: row;
-    }
+  .section {
+    padding: 4rem var(--sides-padding);
+    flex-direction: row;
+  }
 }
