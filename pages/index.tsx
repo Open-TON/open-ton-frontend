@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Layout from "../core/layouts";
-import { HeroSection } from "../features/home";
+import { HeroSection, SectionsContainer } from "../features/home";
 
 const Home: NextPage = () => {
 	return (
@@ -10,6 +10,7 @@ const Home: NextPage = () => {
 				<title>OpenTON</title>
 			</Head>
 			<HeroSection />
+			<SectionsContainer/>
 		</Layout>
 	);
 };
