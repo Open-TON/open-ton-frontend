@@ -1,0 +1,12 @@
+.chart {
+    height: 600px;
+    width: 100%;
+}
+
+/* Tablet and desktop styles */
+@media (min-width: 481px) {
+    .section {
+        padding: 4rem var(--sides-padding);
+        flex-direction: row;
+    }
+}
