@@ -1,4 +1,5 @@
 import { FC } from "react";
+import clsx from "clsx";
 
 import css from "./index.module.css";
 
@@ -47,12 +48,12 @@ const priceElements = [
 
 const Tags = () => (
 	<div className={css.tags}>
-		<div className={css.tag}>
+		<h3 className={css.tag}>
 			Welcome to the OpenTON
-		</div>
-		<div className={css.tag}>
+		</h3>
+		<h3 className={css.tag}>
 			TON ecosystem
-		</div>
+		</h3>
 	</div>
 );
 
@@ -69,7 +70,7 @@ const HeroSection: FC = () => {
 						<span className={css.titleIcon}>
 							<Icon />
 						</span>
-						TON system
+						<span className={css.highlight}>TON system</span>
 					</h1>
 
 					<h2 className={css.subTitle}>
@@ -100,7 +101,7 @@ const HeroSection: FC = () => {
 									</span>
 
 									{element.percentage &&
-										<div className={css.badge}>
+										<div className={clsx(css.badge, index === 0 && css.badgeHighlighted)}>
 											{element.percentage}
 										</div>
 									}
