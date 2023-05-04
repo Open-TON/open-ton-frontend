@@ -41,11 +41,6 @@ const Chart: FC = () => {
 		}));
 		cursor.lineY.set("visible", false);
 
-		// add scrollbar
-		chart.set("scrollbarX", am5.Scrollbar.new(root, {
-			orientation: "horizontal",
-		}));
-
 		const series1 = createAxisAndSeries(root, chart, xAxis, "value1", false, isLogScale);
 		const series2 = createAxisAndSeries(root, chart, xAxis, "value2", true, isLogScale);
 

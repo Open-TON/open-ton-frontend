@@ -17,7 +17,7 @@ const Layout = ({ children }: PropsWithChildren<LayoutProps>) => {
 			<header className={css.header}>
 				<Header />
 			</header>
-			<main className={css.main}>
+			<main>
 				{children}
 			</main>
 			<footer className={css.footer}>

@@ -10,7 +10,7 @@ const Home: NextPage = () => {
 				<title>OpenTON</title>
 			</Head>
 			<HeroSection />
-			<SectionsContainer/>
+			{/* <SectionsContainer/> */}
 		</Layout>
 	);
 };

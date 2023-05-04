@@ -12,10 +12,6 @@
     background: var(--bg-header);
 }
 
-.main {
-    height: auto;
-}
-
 .footer {
     background: var(--bg-footer);
     height: var(--header-height);
