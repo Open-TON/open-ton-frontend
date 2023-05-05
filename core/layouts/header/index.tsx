@@ -2,73 +2,80 @@ import { FC } from "react";
 import Image from "next/image";
 import css from "./index.module.css";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-import HeaderIcon from "../../../assets/icons/headerIcon.svg";
+import LogoIcon from "../../../assets/icons/logo.svg";
 import HomeIcon from "../../../assets/icons/homeIcon.svg";
 import ChartsIcon from "../../../assets/icons/chartsIcon.svg";
 import DashboardsIcon from "../../../assets/icons/dashboardsIcon.svg";
 import ResearchesIcon from "../../../assets/icons/researchesIcon.svg";
 import AcademyIcon from "../../../assets/icons/academyIcon.svg";
-import LangIcon from "../../../assets/icons/langIcon.svg";
+import clsx from "clsx";
 
 interface MenuItem {
-  title: string;
-  link: string;
-  icon: any;
-  selected?: boolean;
+	title: string;
+	link: string;
+	icon: string;
 }
-
 const menuItems: MenuItem[] = [
 	{
 		title: "Main",
 		link: "/",
 		icon: HomeIcon,
-		selected: true,
 	},
 	{
 		title: "Charts",
-		link: "/",
+		link: "/charts",
 		icon: ChartsIcon,
 	},
 	{
 		title: "Dashboards",
-		link: "/",
+		link: "/dashboards",
 		icon: DashboardsIcon,
 	},
 
 	{
 		title: "Researches",
-		link: "/",
+		link: "/researches",
 		icon: ResearchesIcon,
 	},
 	{
 		title: "Academy",
-		link: "/",
+		link: "/academy",
 		icon: AcademyIcon,
 	},
 ];
 
 const Header: FC = () => {
+	const pathname = usePathname();
+
 	return (
 		<nav className={css.navigation}>
 			<Link href="/" className={css.logo}>
-				<Image priority src={HeaderIcon} alt="icon" />
+				<Image
+					priority
+					src={LogoIcon}
+					alt="Logo icon, looks like lying paragraph symbol"
+				/>
+				<span>OpenTON</span>
 			</Link>
 
 			<ul className={css.navList}>
-				{menuItems.map((item, index) => (
-					<Link key={index} href={item.link}>
-						<div className={`${item.selected && css.selectedLink}`}>
+				{menuItems.map((item) => (
+					<li key={item.link}>
+						<Link
+							href={item.link}
+							className={clsx(
+								css.navListItemLink,
+								pathname.endsWith(item.link) && css.navListItemLinkActive
+							)}
+						>
 							<Image src={item.icon} alt="icon" />
-							<li>{item.title}</li>
-						</div>
-					</Link>
+							<span>{item.title}</span>
+						</Link>
+					</li>
 				))}
 			</ul>
-			<Link href="/" className={css.title}>
-				<span>EN</span>
-				<Image src={LangIcon} alt="langIcon" />
-			</Link>
 		</nav>
 	);
 };
